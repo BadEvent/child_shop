@@ -1,0 +1,216 @@
+//FONTS
+@font-face {
+font-family: 'San Francisco Display Black';
+src: url('../fonts/SFUIDisplay-Black.eot');
+src: url('../fonts/SFUIDisplay-Black.eot?#iefix') format('embedded-opentype'),
+url('../fonts/SFUIDisplay-Black.woff') format('woff'),
+url('../fonts/SFUIDisplay-Black.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'San Francisco Display Regular'
+src: url('../fonts/SFUIDisplay-Regular.eot')
+src: url('../fonts/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/SFUIDisplay-Regular.woff') format('woff'),
+url('../fonts/SFUIDisplay-Regular.ttf') format('truetype')
+font-weight: normal
+font-style: normal
+}
+@font-face {
+font-family: 'San Francisco Text Light';
+src: url('../fonts/SFUIText-Light.eot');
+src: url('../fonts/SFUIText-Light.eot?#iefix') format('embedded-opentype'),
+url('../fonts/SFUIText-Light.woff') format('woff'),
+url('../fonts/SFUIText-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'San Francisco Text Heavy';
+src: url('../fonts/SFUIText-Heavy.eot');
+src: url('../fonts/SFUIText-Heavy.eot?#iefix') format('embedded-opentype'),
+url('../fonts/SFUIText-Heavy.woff') format('woff'),
+url('../fonts/SFUIText-Heavy.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+//font-family: 'San Francisco Display Black';
+//font-family: 'San Francisco Display Regular';
+//font-family: 'San Francisco Text Light';
+//font-family: 'San Francisco Text Heavy';
+
+
+$bold_font = 'San Francisco Text Heavy';
+$regular_font = 'San Francisco Display Regular';
+$light_font = 'San Francisco Text Light';
+
+
+
+//logo bg-color #ededed
+$logo_color = #ededed;
+
+
+/********** COLORS************/
+
+$great_color1 = #557570;
+$great_color2 = #fbede2;
+$great_color3 = #f7d1ba;
+$great_color4 = #688f8a;
+$great_color5 = #e9dcd1;
+$great_color6 = #87adb0;
+$great_color7 = #2C6C72;
+
+/*
+*
+* MAIN STYLES
+*
+*
+**/
+body
+    margin 0
+    padding 0
+.container
+    max-width 1400px
+    margin: 0 auto
+.hidden
+  display: none
+h1
+  font-family $bold_font
+p
+  font-family: $light_font
+
+
+/*
+*
+* Header selection
+*
+**/
+
+.header__section
+  padding-top 300px
+  min-height 100vh
+  background-color $logo_color;
+.header__body
+  display flex
+.header__body_photos > img 
+  width 400px
+.header__body_title > p
+  font-family $bold_font
+  font-size 30px
+.header__body_items
+  min-width 50%
+  z-index 100
+  padding: 15px 10px 15px 10px
+  background-color #95a0bdb0
+  border-radius: 15px
+.header__btn
+  width 250px
+  height 50px
+  border-radius: 15px
+  background-color #87ADB0
+  color: white
+.header__btn:hover
+  background-color #2C6C72
+  color: white
+.header__body_title > h1
+  color: $great_color7
+  z-index 10
+  font-size 50px
+.header__body_title
+  padding-bottom 15px
+  z-index 10
+.header__photo
+  position absolute
+  pointer-events: none;
+  z-index 1
+  border-radius: 45px
+.header__photo_1
+  top 100px
+  left 501px
+  transform: rotate(5deg)
+.header__photo_2
+  top 400px
+  left 101px
+  transform: rotate(-15deg)
+.header__photo_3
+  top 200px
+  left 1300px
+  transform: rotate(5deg)
+.header__photo_4
+  top 180px
+  left 850px
+  transform: rotate(-5deg)
+.header__photo_5
+  top 500px
+  left 1100px
+  transform: rotate(5deg)
+.header__photo_6
+  top 400px
+  left 600px
+  transform: rotate(-5deg)
+/*
+* ************* Menu ************
+*/
+.nav__bar
+    position fixed
+    width 100%
+    z-index 1000
+    background-color $logo_color
+.nav_bar__items
+    display: flex
+    justify-content: space-between
+.logo__icon
+    width 70px
+    height 70px
+.nav_bar__search
+    width 30px
+    height 30px
+.nav_bar__controll
+    display: flex
+    justify-content: space-between
+    align-items: center
+.nav_bar__menu
+    margin-left 50px
+    position relative
+#menu__toggle
+  opacity: 0
+#menu__toggle:checked ~ .menu__btn > span
+  transform: rotate(45deg)
+#menu__toggle:checked ~ .menu__btn > span::before
+  top: 0
+  transform: rotate(0)
+  width 30px
+#menu__toggle:checked ~ .menu__btn > span::after
+  top: 0
+  transform: rotate(90deg)
+  width 30px!important
+#menu__toggle:checked ~ .menu__box
+  visibility: visible
+  left: 0
+.menu__btn
+  display: flex
+  align-items: center
+  width: 26px
+  height: 26px
+  cursor: pointer
+  z-index: 1
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after
+  right 0
+  display: block
+  position: absolute
+  width: 30px
+  height: 2px
+  background-color: #616161
+  transition-duration: .25s
+.menu__btn > span::before
+  content: ''
+  width 50px
+  top: -8px
+.menu__btn > span::after
+  content: ''
+  width 20px
+  top: 8px
+/**** End Menu  ******/
